@@ -9,7 +9,6 @@ player.on('loaded', () => {
 
 let setTime = (time) => {
     localStorage.setItem("videoplayer-current-time", JSON.stringify(time));
-    console.log(time.seconds);
 }
 
 player.on('timeupdate', _.throttle(setTime, 1000));
